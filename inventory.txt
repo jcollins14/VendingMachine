@@ -1,2 +1,2 @@
 testdrink,1
-testdrink,3
+testdrink2,3

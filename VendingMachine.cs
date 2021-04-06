@@ -46,13 +46,16 @@ namespace RandomVend
                 if (drink.Name == pick)
                 {
                     drink.Quantity--;
-                    if (drink.Quantity == 0)
-                    {
-                        Drinks.Remove(drink);
-                        pick += "(Last One!)";
-                    }
                 }
             }
+
+            Beverage remove = Drinks.Find(x => x.Quantity.Equals(0));
+            if (remove != null)
+            {
+                pick += " (Last One!)";
+                Drinks.Remove(remove);
+            }
+
             output.WriteLine(pick);
             output.Close();
         }

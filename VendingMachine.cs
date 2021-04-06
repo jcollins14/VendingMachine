@@ -30,6 +30,7 @@ namespace RandomVend
                 {
                     selection.Add(drink.Name);
                 }
+                Console.WriteLine("Added " + drink.Quantity + drink.Name + "(s) into the machine.");
             }
 
             int pick = rng.Next(selection.Count);
